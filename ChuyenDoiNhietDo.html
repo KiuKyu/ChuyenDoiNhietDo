@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <label>Fahrenheit</label>
+        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+               oninput="tempConverter(this.value)"
+               onchange="tempConverter(this.value)"
+               >
+    </p>
+    <p>Celsius: <span id="outputCelsius"></span></p>
+</body>
+<script>
+    function tempConverter(inputNum) {
+        inputNum = parseFloat(inputNum);
+        document.getElementById('outputCelsius').innerHTML = (inputNum - 32) / 1.8;
+    }
+</script>
+</html>
